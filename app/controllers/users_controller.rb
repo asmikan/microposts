@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   def show 
     @user = User.find(params[:id])
     @microposts = @user.microposts.order(created_at: :desc)
+    
   end
   
   def new
@@ -21,7 +22,7 @@ class UsersController < ApplicationController
  
  def edit
    @user = User.find(params[:id])
-
+   check_user(@user)
  end
  
  # http://servername/users/4/update
