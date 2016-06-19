@@ -2,15 +2,9 @@
 
 
   
-<%= @user %> followings list
+<%= @user.name %> followings list
      <ul >
-         <% @followings.each do |user| %>
-         <li>
-             <%= link_to 'gravatar_for(user)',
-                 user_path(user) %> 
-         </li>
-    
+         <%= render @followings %>
      </ul>
-<% end %>     
-     
+
  
