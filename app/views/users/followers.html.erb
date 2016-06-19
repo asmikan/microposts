@@ -1,0 +1,14 @@
+<h1>フォローされている人</h1>
+
+
+    
+    <%= @user %> followers list
+     <ul>
+         <% @followers.each do |user| %>
+         <li>
+             <%= link_to 'gravatar_for(user)',
+                 user_path(user) %> 
+         </li>
+       
+     </ul>
+    <% end %>
